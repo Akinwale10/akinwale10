@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Deals & Coupons | OMOOLA SUPERMARKET</title>
+    <link rel="stylesheet" href="src/styles/main.css" />
+  </head>
+  <body data-page="category">
+    <div data-app-root>
+      <main class="container" style="margin-top:2rem;">
+        <header style="margin-bottom:1.5rem;">
+          <h1 class="section-title">Hot deals & coupons</h1>
+          <p class="tagline">Use <strong>OMOOLA10</strong> for 10% off first orders. Free delivery with <strong>FREEDELIVERY</strong> above ₦20,000.</p>
+        </header>
+        <section>
+          <div class="grid product-grid" data-product-grid></div>
+        </section>
+      </main>
+    </div>
+    <script>
+      if (!window.location.search.includes('category=deals')) {
+        const url = new URL(window.location.href);
+        url.searchParams.set('category', 'deals');
+        window.location.replace(url.toString());
+      }
+    </script>
+    <script type="module" src="src/scripts/app.js" defer></script>
+  </body>
+</html>

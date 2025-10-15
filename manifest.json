@@ -1,0 +1,22 @@
+{
+  "name": "OMOOLA SUPERMARKET",
+  "short_name": "OMOOLA",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#FFF7ED",
+  "theme_color": "#7A1631",
+  "icons": [
+    {
+      "src": "icons/icon-192.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable any"
+    }
+  ]
+}

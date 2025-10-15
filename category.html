@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shop Groceries by Category | OMOOLA SUPERMARKET</title>
+    <meta name="description" content="Discover fresh groceries, meats, pantry staples, and more by category at OMOOLA SUPERMARKET." />
+    <link rel="stylesheet" href="src/styles/main.css" />
+  </head>
+  <body data-page="category">
+    <div data-app-root>
+      <main class="container" style="margin-top:2rem;">
+        <nav class="breadcrumbs" data-breadcrumbs>
+          <a href="index.html">Home</a> / <span data-page-title>Shop</span>
+        </nav>
+        <header style="margin-bottom:1.5rem;">
+          <h1 class="section-title" data-page-title>Shop all groceries</h1>
+          <p data-category-description class="tagline">Browse premium groceries curated for Nigerian kitchens.</p>
+        </header>
+        <div class="sort-select">
+          <label for="sort">Sort by</label>
+          <select id="sort" data-sort>
+            <option value="popular">Most popular</option>
+            <option value="newest">Newest</option>
+            <option value="price-low">Price: Low to high</option>
+            <option value="price-high">Price: High to low</option>
+          </select>
+        </div>
+        <div style="display:grid;grid-template-columns:280px 1fr;gap:2rem;align-items:start;">
+          <form class="filters-panel" aria-label="Filters" data-filter-form>
+            <fieldset class="filter-group">
+              <legend>Price</legend>
+              <label><span>Min (₦)</span><input type="number" name="price-min" min="0" /></label>
+              <label><span>Max (₦)</span><input type="number" name="price-max" min="0" /></label>
+            </fieldset>
+            <fieldset class="filter-group">
+              <legend>Brand</legend>
+              <input type="text" name="brand" placeholder="e.g. Indomie" />
+            </fieldset>
+            <fieldset class="filter-group">
+              <legend>Dietary</legend>
+              <label><input type="radio" name="dietary" value="" checked /> Any</label>
+              <label><input type="radio" name="dietary" value="halal" /> Halal-friendly</label>
+              <label><input type="radio" name="dietary" value="gluten-free" /> Gluten-free</label>
+            </fieldset>
+            <p class="badge">Tip: Apply coupons <strong>OMOOLA10</strong> or <strong>FREEDELIVERY</strong></p>
+          </form>
+          <section aria-live="polite" aria-busy="false">
+            <div class="grid product-grid" data-product-grid></div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script type="module" src="src/scripts/app.js" defer></script>
+  </body>
+</html>

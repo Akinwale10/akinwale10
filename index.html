@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OMOOLA SUPERMARKET | Fresh groceries, fast delivery</title>
+    <meta name="description" content="Shop quality groceries, fresh produce, and Nigerian pantry staples from OMOOLA SUPERMARKET. Same-day delivery in Lagos and nationwide shipping." />
+    <meta property="og:title" content="OMOOLA SUPERMARKET" />
+    <meta property="og:description" content="Fresh groceries, fast delivery. Friendly service for Nigerian families." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=1200&q=80" />
+    <meta property="og:type" content="website" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" type="image/svg+xml" href="icons/icon-192.svg" />
+    <link rel="apple-touch-icon" href="icons/icon-512.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="src/styles/main.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "OMOOLA SUPERMARKET",
+        "url": "https://omoola.ng",
+        "logo": "https://omoola.ng/logo.png",
+        "sameAs": [
+          "https://www.facebook.com/omoola",
+          "https://www.instagram.com/omoola",
+          "https://www.twitter.com/omoola"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+2348030000000",
+          "contactType": "customer service",
+          "areaServed": "NG",
+          "availableLanguage": ["English", "Yoruba"]
+        }
+      }
+    </script>
+  </head>
+  <body data-page="home">
+    <div data-app-root>
+      <main>
+        <section class="container hero" aria-label="Featured promotions">
+          <div data-hero></div>
+          <div class="hero-indicators" aria-hidden="true"></div>
+        </section>
+
+        <section class="container section" aria-labelledby="categories-heading">
+          <h2 class="section-title" id="categories-heading">Shop by category</h2>
+          <div class="category-tiles" data-category-tiles></div>
+        </section>
+
+        <section class="container section" aria-labelledby="popular-heading">
+          <div class="section-heading" style="display:flex;justify-content:space-between;align-items:center;gap:1rem;">
+            <h2 class="section-title" id="popular-heading">Popular this week</h2>
+            <a class="btn btn-outline" href="category.html?sort=popular">View all</a>
+          </div>
+          <div class="grid product-grid" data-popular></div>
+        </section>
+
+        <section class="container section" aria-labelledby="new-heading">
+          <div class="section-heading" style="display:flex;justify-content:space-between;align-items:center;gap:1rem;">
+            <h2 class="section-title" id="new-heading">New arrivals</h2>
+            <a class="btn btn-outline" href="category.html?sort=newest">View all</a>
+          </div>
+          <div class="grid product-grid" data-new-arrivals></div>
+        </section>
+
+        <section class="container section" aria-labelledby="budget-heading">
+          <div class="section-heading" style="display:flex;justify-content:space-between;align-items:center;gap:1rem;">
+            <h2 class="section-title" id="budget-heading">Under ₦1,500</h2>
+            <a class="btn btn-outline" href="category.html?priceMax=1500">Shop budget picks</a>
+          </div>
+          <div class="grid product-grid" data-under-1500></div>
+        </section>
+
+        <section class="container section" aria-label="Delivery benefits">
+          <div class="promo-strip" data-promo-strip></div>
+        </section>
+
+        <section class="container section" aria-label="Newsletter">
+          <div class="newsletter-card" data-newsletter-card></div>
+        </section>
+
+        <section class="container section" aria-label="Trust badges">
+          <h2 class="section-title">Why shop with OMOOLA?</h2>
+          <div class="trust-badges" data-trust-badges></div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="src/scripts/app.js" defer></script>
+  </body>
+</html>
