@@ -1,95 +1,513 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>OMOOLA SUPERMARKET | Fresh groceries, fast delivery</title>
-    <meta name="description" content="Shop quality groceries, fresh produce, and Nigerian pantry staples from OMOOLA SUPERMARKET. Same-day delivery in Lagos and nationwide shipping." />
-    <meta property="og:title" content="OMOOLA SUPERMARKET" />
-    <meta property="og:description" content="Fresh groceries, fast delivery. Friendly service for Nigerian families." />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=1200&q=80" />
+    <title>OMOOLA SUPERMARKET STORES | Premium Provisions in Owode Yewa</title>
+    <meta
+      name="description"
+      content="OMOOLA SUPERMARKET STORES supplies premium provisions, groceries, and household essentials in Owode Yewa, Ogun State. Explore our curated categories, shop top brands, and call to order for fast service."
+    />
+    <meta property="og:title" content="OMOOLA SUPERMARKET STORES" />
+    <meta
+      property="og:description"
+      content="Discover a modern supermarket experience in Owode Yewa with premium groceries, trusted brands, and personalised service."
+    />
     <meta property="og:type" content="website" />
-    <link rel="manifest" href="manifest.json" />
-    <link rel="icon" type="image/svg+xml" href="icons/icon-192.svg" />
-    <link rel="apple-touch-icon" href="icons/icon-512.svg" />
+    <meta property="og:url" content="https://omoolasupermarket.example" />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1586864387789-628af9feedc4?auto=format&fit=crop&w=1600&q=80"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="OMOOLA SUPERMARKET STORES" />
+    <meta
+      name="twitter:description"
+      content="Your trusted destination for quality provisions, beverages, toiletries, and more in Owode Yewa, Ogun State."
+    />
+    <link rel="icon" href="public/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="src/styles/main.css" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "OMOOLA SUPERMARKET",
-        "url": "https://omoola.ng",
-        "logo": "https://omoola.ng/logo.png",
-        "sameAs": [
-          "https://www.facebook.com/omoola",
-          "https://www.instagram.com/omoola",
-          "https://www.twitter.com/omoola"
+        "@type": "LocalBusiness",
+        "@id": "https://omoolasupermarket.example#store",
+        "name": "OMOOLA SUPERMARKET STORES",
+        "image": "https://images.unsplash.com/photo-1586864387789-628af9feedc4?auto=format&fit=crop&w=1200&q=80",
+        "description": "Retail supermarket in Owode Yewa offering premium provisions, groceries, and household essentials.",
+        "url": "https://omoolasupermarket.example",
+        "telephone": "+234 803 555 1088",
+        "email": "hello@omoolastores.ng",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ISAGA BUS STOP, OPP. THE GEM INTERNATIONAL SCHOOL, ILARO ROAD",
+          "addressLocality": "Owode Yewa",
+          "addressRegion": "Ogun State",
+          "addressCountry": "NG"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 6.7062,
+          "longitude": 2.7298
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "07:00",
+            "closes": "21:00"
+          }
         ],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+2348030000000",
-          "contactType": "customer service",
-          "areaServed": "NG",
-          "availableLanguage": ["English", "Yoruba"]
-        }
+        "priceRange": "₦₦",
+        "sameAs": [
+          "https://www.facebook.com/omoolasupermarket",
+          "https://www.instagram.com/omoolasupermarket",
+          "https://wa.me/2348035551088"
+        ]
       }
     </script>
   </head>
-  <body data-page="home">
-    <div data-app-root>
-      <main>
-        <section class="container hero" aria-label="Featured promotions">
-          <div data-hero></div>
-          <div class="hero-indicators" aria-hidden="true"></div>
-        </section>
-
-        <section class="container section" aria-labelledby="categories-heading">
-          <h2 class="section-title" id="categories-heading">Shop by category</h2>
-          <div class="category-tiles" data-category-tiles></div>
-        </section>
-
-        <section class="container section" aria-labelledby="popular-heading">
-          <div class="section-heading" style="display:flex;justify-content:space-between;align-items:center;gap:1rem;">
-            <h2 class="section-title" id="popular-heading">Popular this week</h2>
-            <a class="btn btn-outline" href="category.html?sort=popular">View all</a>
-          </div>
-          <div class="grid product-grid" data-popular></div>
-        </section>
-
-        <section class="container section" aria-labelledby="new-heading">
-          <div class="section-heading" style="display:flex;justify-content:space-between;align-items:center;gap:1rem;">
-            <h2 class="section-title" id="new-heading">New arrivals</h2>
-            <a class="btn btn-outline" href="category.html?sort=newest">View all</a>
-          </div>
-          <div class="grid product-grid" data-new-arrivals></div>
-        </section>
-
-        <section class="container section" aria-labelledby="budget-heading">
-          <div class="section-heading" style="display:flex;justify-content:space-between;align-items:center;gap:1rem;">
-            <h2 class="section-title" id="budget-heading">Under ₦1,500</h2>
-            <a class="btn btn-outline" href="category.html?priceMax=1500">Shop budget picks</a>
-          </div>
-          <div class="grid product-grid" data-under-1500></div>
-        </section>
-
-        <section class="container section" aria-label="Delivery benefits">
-          <div class="promo-strip" data-promo-strip></div>
-        </section>
-
-        <section class="container section" aria-label="Newsletter">
-          <div class="newsletter-card" data-newsletter-card></div>
-        </section>
-
-        <section class="container section" aria-label="Trust badges">
-          <h2 class="section-title">Why shop with OMOOLA?</h2>
-          <div class="trust-badges" data-trust-badges></div>
-        </section>
-      </main>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <div class="top-banner" role="status" aria-live="polite">
+      <div class="container">
+        <p>
+          Fresh deals this week – save up to 15% on beverages & breakfast essentials.
+          <a href="#featured-products" class="top-banner__link">See offers</a>
+        </p>
+        <a class="top-banner__cta" href="tel:+2348035551088">Call to Order</a>
+      </div>
     </div>
+    <header class="site-header" role="banner">
+      <div class="container site-header__inner">
+        <a class="brand" href="#hero" aria-label="OMOOLA SUPERMARKET STORES home">
+          <span class="brand__primary">OMOOLA</span>
+          <span class="brand__secondary">SUPERMARKET STORES</span>
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span aria-hidden="true"></span>
+        </button>
+        <nav class="site-nav" aria-label="Primary" id="primary-navigation">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li class="has-dropdown">
+              <button type="button" aria-haspopup="true" aria-expanded="false">Products</button>
+              <ul class="dropdown" data-category-menu></ul>
+            </li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="site-nav__cta">
+            <a class="btn btn-primary" href="https://wa.me/2348035551088" target="_blank" rel="noopener">
+              <span aria-hidden="true">📞</span>
+              Call to Order
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="hero" id="hero" aria-label="OMOOLA SUPERMARKET STORES">
+        <div class="hero__media" role="presentation">
+          <picture>
+            <source
+              type="image/avif"
+              srcset="https://images.unsplash.com/photo-1586864387789-628af9feedc4?auto=format&fit=crop&w=1600&h=1000&q=80&fm=avif"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1586864387789-628af9feedc4?auto=format&fit=crop&w=1600&q=80"
+              alt="Well-arranged supermarket shelves with premium groceries"
+              loading="lazy"
+            />
+          </picture>
+        </div>
+        <div class="hero__content container" data-animate="fade-up">
+          <span class="badge">supermarket in Owode Yewa</span>
+          <h1>Premium provisions, delightful service & fast fulfilment.</h1>
+          <p>
+            Discover a modern shopping experience at ISAGA BUS STOP, opposite The Gem International School, Ilaro Road, Owode
+            Yewa. Shop curated groceries, trusted Nigerian brands, and everyday essentials with personalised care.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn-primary" href="https://wa.me/2348035551088" target="_blank" rel="noopener">Call to Order</a>
+            <a class="btn btn-outline" href="#featured-products">Browse Provisions</a>
+          </div>
+          <ul class="hero__highlights" aria-label="Store highlights">
+            <li>
+              <span aria-hidden="true">⚡</span>
+              Same-day fulfilment within Ogun & Lagos
+            </li>
+            <li>
+              <span aria-hidden="true">🛒</span>
+              250+ curated grocery and household brands
+            </li>
+            <li>
+              <span aria-hidden="true">📍</span>
+              Easy parking at Owode Yewa flagship store
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="container highlights" aria-labelledby="highlights-title">
+        <div class="section-heading">
+          <h2 class="section-title" id="highlights-title">Why customers choose OMOOLA SUPERMARKET STORES</h2>
+          <p>Built on trust, quality, and warm hospitality since 2010.</p>
+        </div>
+        <div class="highlight-grid" data-animate="stagger-up">
+          <article class="highlight-card">
+            <h3>Curated Variety</h3>
+            <p>From beverages to baby items, our shelves are carefully stocked with top Nigerian and international brands.</p>
+          </article>
+          <article class="highlight-card">
+            <h3>Quality Assurance</h3>
+            <p>Each product undergoes freshness checks, ensuring you take home only the best provisions.</p>
+          </article>
+          <article class="highlight-card">
+            <h3>Community Focus</h3>
+            <p>We support local suppliers and serve families, hotels, and offices across Owode Yewa and beyond.</p>
+          </article>
+          <article class="highlight-card">
+            <h3>Convenient Service</h3>
+            <p>Enjoy in-store assistance, call-ahead orders, and flexible delivery to your doorstep.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="categories" aria-labelledby="categories-title">
+        <div class="container">
+          <div class="section-heading">
+            <h2 class="section-title" id="categories-title">Featured categories</h2>
+            <p>Explore premium provisions tailored to your pantry, lifestyle, and family.</p>
+          </div>
+          <div class="category-grid" data-category-grid></div>
+        </div>
+      </section>
+
+      <section class="about" id="about" aria-labelledby="about-title">
+        <div class="container about__grid">
+          <div class="about__content" data-animate="fade-up">
+            <span class="badge">About OMOOLA SUPERMARKET STORES</span>
+            <h2 class="section-title" id="about-title">Rooted in hospitality. Driven by innovation.</h2>
+            <p>
+              OMOOLA SUPERMARKET STORES began as a family-led neighborhood provision store and has grown into a trusted retail
+              destination serving Owode Yewa, Ogun State. We blend warm, human service with tech-enabled inventory, ensuring every
+              aisle is filled with essentials your household depends on.
+            </p>
+            <div class="about__stats">
+              <div>
+                <strong>14+</strong>
+                <span>Years delivering quality</span>
+              </div>
+              <div>
+                <strong>250+</strong>
+                <span>Curated grocery brands</span>
+              </div>
+              <div>
+                <strong>3K+</strong>
+                <span>Happy weekly shoppers</span>
+              </div>
+            </div>
+            <div class="about__values">
+              <h3>Mission</h3>
+              <p>To simplify everyday shopping with dependable provisions, fair pricing, and heartfelt service.</p>
+              <h3>Vision</h3>
+              <p>To be the most trusted supermarket brand in Ogun State, renowned for quality, innovation, and community impact.</p>
+              <h3>Values</h3>
+              <ul>
+                <li>Integrity in sourcing and service</li>
+                <li>Customer-first hospitality</li>
+                <li>Continuous improvement & innovation</li>
+                <li>Community empowerment</li>
+              </ul>
+            </div>
+          </div>
+          <div class="about__media" data-animate="fade-up">
+            <figure>
+              <picture>
+                <source
+                  type="image/avif"
+                  srcset="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&h=900&q=80&fm=avif"
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=80"
+                  alt="OMOOLA supermarket team assisting a customer"
+                  loading="lazy"
+                />
+              </picture>
+              <figcaption>Our management team delivering exceptional in-store experiences.</figcaption>
+            </figure>
+            <div class="team" role="list" aria-label="Management team">
+              <article class="team-card" role="listitem">
+                <img src="https://i.pravatar.cc/200?img=12" alt="Portrait of Ayo Omoola" loading="lazy" />
+                <div>
+                  <h3>Ayo Omoola</h3>
+                  <p>Managing Director</p>
+                </div>
+              </article>
+              <article class="team-card" role="listitem">
+                <img src="https://i.pravatar.cc/200?img=32" alt="Portrait of Funke Omoola" loading="lazy" />
+                <div>
+                  <h3>Funke Omoola</h3>
+                  <p>Head of Merchandising</p>
+                </div>
+              </article>
+              <article class="team-card" role="listitem">
+                <img src="https://i.pravatar.cc/200?img=45" alt="Portrait of Tunde Ajayi" loading="lazy" />
+                <div>
+                  <h3>Tunde Ajayi</h3>
+                  <p>Operations Lead</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="products" id="featured-products" aria-labelledby="products-title">
+        <div class="container">
+          <div class="section-heading">
+            <h2 class="section-title" id="products-title">Signature provisions & customer favourites</h2>
+            <p>Browse by category, discover new arrivals, and tap to request a quick quote or delivery.</p>
+          </div>
+          <div class="products__toolbar" role="region" aria-label="Product filters">
+            <label for="product-search" class="sr-only">Search products</label>
+            <input id="product-search" type="search" placeholder="Search products, brands, or keywords" autocomplete="off" />
+            <label for="product-category" class="sr-only">Filter by category</label>
+            <select id="product-category">
+              <option value="all">All categories</option>
+            </select>
+            <button class="btn btn-outline" type="button" data-reset-products>Reset</button>
+          </div>
+          <div class="product-grid" data-product-grid></div>
+          <div class="products__cta">
+            <p>Need bulk supplies for your restaurant, hotel, or office?</p>
+            <a class="btn btn-primary" href="mailto:hello@omoolastores.ng">Request a wholesale quote</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery" id="gallery" aria-labelledby="gallery-title">
+        <div class="container">
+          <div class="section-heading">
+            <h2 class="section-title" id="gallery-title">Inside our flagship store</h2>
+            <p>Take a closer look at our aisles, curated displays, and community-focused events.</p>
+          </div>
+          <div class="gallery-grid" data-gallery-grid></div>
+        </div>
+      </section>
+
+      <section class="testimonials" id="testimonials" aria-labelledby="testimonials-title">
+        <div class="container">
+          <div class="section-heading">
+            <h2 class="section-title" id="testimonials-title">Loved by families & businesses alike</h2>
+            <p>Hear from our loyal shoppers across Owode Yewa, Ilaro Road, and beyond.</p>
+          </div>
+          <div class="testimonial-slider" role="region" aria-live="polite">
+            <button class="slider-control prev" type="button" aria-label="Previous testimonial" data-slider-prev>&larr;</button>
+            <div class="testimonial-track" data-testimonial-track></div>
+            <button class="slider-control next" type="button" aria-label="Next testimonial" data-slider-next>&rarr;</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="blog" id="blog" aria-labelledby="blog-title">
+        <div class="container">
+          <div class="section-heading">
+            <h2 class="section-title" id="blog-title">Insights, arrivals & supermarket tips</h2>
+            <p>Stay informed with the latest from OMOOLA SUPERMARKET STORES.</p>
+          </div>
+          <div class="blog-grid" data-blog-grid></div>
+        </div>
+      </section>
+
+      <section class="newsletter" aria-labelledby="newsletter-title">
+        <div class="container newsletter__content">
+          <div>
+            <h2 class="section-title" id="newsletter-title">Never miss new arrivals & promotions</h2>
+            <p>Subscribe for curated grocery tips, flash sales, and community events. We respect your inbox.</p>
+          </div>
+          <form class="newsletter__form" data-newsletter-form novalidate>
+            <label for="newsletter-email" class="sr-only">Email address</label>
+            <input id="newsletter-email" type="email" name="email" placeholder="Enter your email" required />
+            <button class="btn btn-primary" type="submit">Subscribe</button>
+            <p class="form-feedback" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="container contact__grid">
+          <div class="contact__content" data-animate="fade-up">
+            <span class="badge">Visit or reach out</span>
+            <h2 class="section-title" id="contact-title">We are here for you every day, 7am – 9pm</h2>
+            <p>
+              Stop by our flagship store at ISAGA BUS STOP, opposite The Gem International School, Ilaro Road, Owode Yewa, Ogun
+              State. Call ahead to reserve items, schedule deliveries, or plan corporate provisioning.
+            </p>
+            <ul class="contact__list">
+              <li>
+                <span aria-hidden="true">📞</span>
+                <a href="tel:+2348035551088">+234 803 555 1088</a>
+              </li>
+              <li>
+                <span aria-hidden="true">✉️</span>
+                <a href="mailto:hello@omoolastores.ng">hello@omoolastores.ng</a>
+              </li>
+              <li>
+                <span aria-hidden="true">📍</span>
+                ISAGA BUS STOP, Opp. The Gem International School, Ilaro Road, Owode Yewa, Ogun State
+              </li>
+              <li>
+                <span aria-hidden="true">⏰</span>
+                Open daily, 7:00am – 9:00pm
+              </li>
+            </ul>
+            <div class="contact__actions">
+              <a class="btn btn-outline" href="https://maps.app.goo.gl/gVXKp1Rk8bGVmV5C8" target="_blank" rel="noopener"
+                >Get Directions</a
+              >
+              <a class="btn btn-primary" href="https://wa.me/2348035551088" target="_blank" rel="noopener">WhatsApp Us</a>
+            </div>
+            <div class="social-links" aria-label="Social media">
+              <a href="https://www.facebook.com/omoolasupermarket" target="_blank" rel="noopener">Facebook</a>
+              <a href="https://www.instagram.com/omoolasupermarket" target="_blank" rel="noopener">Instagram</a>
+              <a href="https://wa.me/2348035551088" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+          </div>
+          <div class="contact__form" data-animate="fade-up">
+            <form id="contact-form" novalidate>
+              <fieldset>
+                <legend>Send us a message</legend>
+                <div class="form-group">
+                  <label for="name">Full name</label>
+                  <input id="name" name="name" type="text" autocomplete="name" required />
+                  <p class="form-error" id="name-error"></p>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email address</label>
+                  <input id="email" name="email" type="email" autocomplete="email" required />
+                  <p class="form-error" id="email-error"></p>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone number</label>
+                  <input id="phone" name="phone" type="tel" autocomplete="tel" required />
+                  <p class="form-error" id="phone-error"></p>
+                </div>
+                <div class="form-group">
+                  <label for="message">How can we help?</label>
+                  <textarea id="message" name="message" rows="4" required></textarea>
+                  <p class="form-error" id="message-error"></p>
+                </div>
+                <button class="btn btn-primary" type="submit">Submit message</button>
+                <p class="form-feedback" aria-live="polite"></p>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+        <div class="map" aria-hidden="true">
+          <iframe
+            title="OMOOLA SUPERMARKET STORES location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7929.8916557470395!2d2.724!3d6.7062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103a5ee8eb1b76ad%3A0x7dd3df47a032e0cd!2sOwode%20Yewa!5e0!3m2!1sen!2sng!4v1700000000000"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container site-footer__grid">
+        <div>
+          <a class="brand brand--footer" href="#hero">
+            <span class="brand__primary">OMOOLA</span>
+            <span class="brand__secondary">SUPERMARKET STORES</span>
+          </a>
+          <p>
+            Premium supermarket in Owode Yewa delivering trusted provisions, superior service, and community-driven shopping
+            experiences.
+          </p>
+          <div class="store-hours">
+            <strong>Store hours:</strong>
+            <span>Daily 7:00am – 9:00pm</span>
+          </div>
+        </div>
+        <div>
+          <h3>Quick links</h3>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#featured-products">Products</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Customer care</h3>
+          <ul>
+            <li><a href="mailto:hello@omoolastores.ng">Email support</a></li>
+            <li><a href="tel:+2348035551088">Call customer service</a></li>
+            <li><a href="https://wa.me/2348035551088" target="_blank" rel="noopener">WhatsApp ordering</a></li>
+            <li><a href="https://maps.app.goo.gl/gVXKp1Rk8bGVmV5C8" target="_blank" rel="noopener">Get directions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Policies</h3>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="delivery-returns.html">Delivery & Returns</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container site-footer__bottom">
+        <p>&copy; <span data-year></span> OMOOLA SUPERMARKET STORES. All rights reserved.</p>
+        <div class="footer-meta">
+          <a href="sitemap.xml">Sitemap</a>
+          <a href="robots.txt">Robots.txt</a>
+        </div>
+      </div>
+    </footer>
+
+    <button class="whatsapp-fab" type="button" aria-label="Chat on WhatsApp" data-whatsapp>
+      <span aria-hidden="true">💬</span>
+    </button>
+
+    <div class="modal" data-modal hidden>
+      <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal__close" type="button" aria-label="Close dialog" data-modal-close>&times;</button>
+        <div class="modal__content" data-modal-content></div>
+      </div>
+    </div>
+
+    <div class="search-overlay" data-search-overlay hidden>
+      <div class="search-overlay__content">
+        <button class="search-overlay__close" type="button" aria-label="Close search results" data-search-close>&times;</button>
+        <h2>Search results</h2>
+        <ul class="search-results" data-search-results role="list"></ul>
+      </div>
+    </div>
+
     <script type="module" src="src/scripts/app.js" defer></script>
   </body>
 </html>

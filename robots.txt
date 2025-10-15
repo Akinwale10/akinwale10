@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://omoolasupermarket.example/sitemap.xml
