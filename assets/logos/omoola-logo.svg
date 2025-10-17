@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" role="img" aria-labelledby="title desc">
+  <title id="title">Omoola Supermarket Stores logo</title>
+  <desc id="desc">Rounded logomark and wordmark for Omoola Supermarket Stores.</desc>
+  <defs>
+    <linearGradient id="mark" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#7A1631" />
+      <stop offset="100%" stop-color="#E0B437" />
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="200" height="60" rx="16" fill="#111827" />
+  <circle cx="44" cy="30" r="20" fill="url(#mark)" />
+  <path d="M36 30c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" />
+  <text x="90" y="37" font-family="Anton, sans-serif" font-size="26" fill="#FFFFFF" letter-spacing="2">OMOOLA</text>
+</svg>
