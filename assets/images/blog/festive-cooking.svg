@@ -1,0 +1,17 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 480' role='img' aria-labelledby='title desc'>
+  <title id='title'>Festive Cooking</title>
+  <desc id='desc'>Stylized illustration representing festive cooking for Omoola Supermarket Stores.</desc>
+  <defs>
+    <linearGradient id='grad' x1='0%' x2='100%' y1='0%' y2='100%'>
+      <stop offset='0%' stop-color='#111827' />
+      <stop offset='100%' stop-color='#7A1631' />
+    </linearGradient>
+  </defs>
+  <rect width='640' height='480' fill='url(#grad)' rx='32' />
+  <g fill='rgba(255,255,255,0.85)'>
+    <circle cx='180' cy='180' r='86' opacity='0.9' />
+    <circle cx='320' cy='300' r='120' opacity='0.75' />
+    <circle cx='470' cy='200' r='90' opacity='0.6' />
+  </g>
+  <text x='50%' y='55%' text-anchor='middle' font-family='Anton, sans-serif' font-size='64' fill='#FFFFFF' letter-spacing='1.5'>FESTIVE COOKING</text>
+</svg>

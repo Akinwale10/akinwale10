@@ -1,0 +1,160 @@
+/* Base styles and design tokens for Omoola Supermarket Stores */
+
+/* Meyer reset with adjustments */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+ul[role='list'], ol[role='list'] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+:root {
+  /* Color tokens */
+  --color-primary: #7A1631;
+  --color-secondary: #1FA84D;
+  --color-accent: #E0B437;
+  --color-bg: #F7F8FA;
+  --color-surface: #FFFFFF;
+  --color-text: #111827;
+  --color-muted: #6B7280;
+  --color-success: #16A34A;
+  --color-danger: #DC2626;
+  --color-warning: #F59E0B;
+  --color-info: #0EA5E9;
+  --color-border: rgba(17, 24, 39, 0.12);
+  --color-shadow: rgba(17, 24, 39, 0.1);
+  --gradient-primary: linear-gradient(135deg, rgba(122,22,49,0.95) 0%, rgba(31,168,77,0.9) 100%);
+
+  /* Typography */
+  --font-heading: 'Anton', 'Arial Black', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-size-xs: clamp(0.75rem, 0.72rem + 0.2vw, 0.8rem);
+  --font-size-sm: clamp(0.875rem, 0.82rem + 0.2vw, 0.95rem);
+  --font-size-base: clamp(1rem, 0.98rem + 0.2vw, 1.05rem);
+  --font-size-lg: clamp(1.125rem, 1.05rem + 0.4vw, 1.25rem);
+  --font-size-xl: clamp(1.5rem, 1.2rem + 1vw, 1.75rem);
+  --font-size-2xl: clamp(2rem, 1.6rem + 1.5vw, 2.5rem);
+  --font-size-3xl: clamp(2.5rem, 2rem + 2vw, 3.5rem);
+
+  /* Spacing scale */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  /* Radii */
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 18px;
+  --radius-round: 999px;
+
+  /* Shadows */
+  --shadow-soft: 0 12px 32px rgba(17, 24, 39, 0.08);
+  --shadow-hover: 0 18px 40px rgba(17, 24, 39, 0.12);
+
+  /* Layout */
+  --container-width: min(1200px, 100% - 2.5rem);
+  --nav-height: 84px;
+  --topbar-height: 42px;
+
+  /* Z-index */
+  --z-header: 800;
+  --z-drawer: 900;
+  --z-modal: 950;
+  --z-toast: 1000;
+
+  /* Breakpoints */
+  --bp-sm: 640px;
+  --bp-md: 1024px;
+  --bp-lg: 1280px;
+
+  /* Motion */
+  --transition-base: 180ms ease;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  background: var(--color-bg);
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+}
+
+main {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+p {
+  line-height: 1.6;
+  color: var(--color-muted);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
