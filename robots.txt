@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.omoola.ng/sitemap.xml
+Sitemap: https://www.omoolasupermarketstores.com/sitemap.xml

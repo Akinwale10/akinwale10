@@ -3,9 +3,9 @@
   "short_name": "Omoola",
   "start_url": "/index.html",
   "display": "standalone",
-  "background_color": "#F7F8FA",
-  "theme_color": "#7A1631",
-  "description": "Premium Nigerian groceries delivered same-day across Lagos.",
+  "background_color": "#F5F7FB",
+  "theme_color": "#0F3D91",
+  "description": "Neighbourhood supermarket serving Owode Yewa with curated provisions and concierge delivery.",
   "icons": [
     {
       "src": "assets/logos/omoola-logo.svg",

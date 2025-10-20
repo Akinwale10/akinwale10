@@ -75,10 +75,10 @@ function renderProduct(product, container) {
               </div>
               <div class="card d-grid gap-sm">
                 <h3>Delivery & Returns</h3>
-                <p>Enter your Lagos postcode to see delivery ETA.</p>
+                <p>Enter your Owode Yewa address to see delivery ETA.</p>
                 <div class="input-field">
                   <label for="postcode">Delivery area</label>
-                  <input id="postcode" type="text" placeholder="e.g. Lekki Phase 1" />
+                  <input id="postcode" type="text" placeholder="e.g. Owode Yewa" />
                 </div>
                 <p class="text-muted">Free delivery from ₦25,000. Returns accepted within 24hrs of delivery.</p>
               </div>

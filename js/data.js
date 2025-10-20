@@ -3472,8 +3472,8 @@ export const coupons = [
 
 export const faqs = [
   {
-    "question": "How fast do you deliver within Lagos?",
-    "answer": "We deliver same-day across most Lagos mainland and island locations when you order before 6pm."
+    "question": "How fast do you deliver within Owode Yewa?",
+    "answer": "Order before 4pm for same-day delivery within Owode Yewa, Ilaro Road axis, Idi Iroko, and nearby Ogun communities."
   },
   {
     "question": "Do you source from local farmers?",
@@ -3500,8 +3500,8 @@ export const faqs = [
     "answer": "Enter your coupon code in cart or checkout. The discount appears instantly once eligible."
   },
   {
-    "question": "Do you deliver outside Lagos?",
-    "answer": "We currently serve Lagos full-time and Abuja/Port Harcourt via scheduled dispatch days."
+    "question": "Do you deliver outside Ogun State?",
+    "answer": "Yes. We cover Ogun border towns daily and coordinate weekly refrigerated dispatches to Abeokuta, Lagos, and neighbouring states on request."
   },
   {
     "question": "How do loyalty points work?",
@@ -3515,9 +3515,9 @@ export const faqs = [
 
 export const blogPosts = [
   {
-    "title": "Lagos Market Finds We Love",
-    "slug": "lagos-market-finds",
-    "excerpt": "Seasonal produce straight from Mile 12 to your doorstep.",
+    "title": "Owode Yewa Market Finds We Love",
+    "slug": "owode-yewa-market-finds",
+    "excerpt": "Seasonal produce sourced from Yewa farmers and ready for your pantry.",
     "image": "assets/images/blog/lagos-market-finds.svg",
     "image2x": "assets/images/blog/lagos-market-finds@2x.svg"
   },
@@ -3552,7 +3552,7 @@ export const blogPosts = [
   {
     "title": "Quick Weeknight Dinners",
     "slug": "quick-weeknight-dinners",
-    "excerpt": "20-minute meals for Lagos traffic evenings.",
+    "excerpt": "20-minute meals for busy border commutes and late store runs.",
     "image": "assets/images/blog/quick-weeknight-dinners.svg",
     "image2x": "assets/images/blog/quick-weeknight-dinners@2x.svg"
   }
@@ -3560,64 +3560,66 @@ export const blogPosts = [
 
 export const heroPromos = [
   {
-    "title": "Fresh to your door",
-    "subtitle": "Over 5,000 groceries delivered across Lagos daily.",
+    "kicker": "Owode Yewa's trusted grocer",
+    "title": "Fresh provisions for every family table",
+    "subtitle": "Collect in minutes at Isaga Bus Stop or schedule a doorstep delivery along Ilaro Road.",
     "image": "assets/images/hero/premium-groceries@2x.svg",
     "ctaPrimary": {
-      "label": "Shop Now",
-      "href": "#popular"
+      "label": "Call to Order",
+      "href": "tel:+2349060001122"
     },
     "ctaSecondary": {
-      "label": "View Deals",
-      "href": "#deals"
+      "label": "Get Directions",
+      "href": "contact.html#map"
     }
   },
   {
-    "title": "Exclusive Omoola Deals",
-    "subtitle": "Unlock loyalty pricing on pantry essentials every weekend.",
+    "kicker": "Quality & variety",
+    "title": "Stock your pantry with trusted brands",
+    "subtitle": "From beverages to baby care, discover over 2,000 essentials curated for Ogun State households.",
     "image": "assets/images/hero/lagos-delivery@2x.svg",
     "ctaPrimary": {
       "label": "Browse Categories",
       "href": "category.html?slug=pantry-essentials"
     },
     "ctaSecondary": {
-      "label": "Join Loyalty",
-      "href": "account.html#loyalty"
+      "label": "See New Arrivals",
+      "href": "#new"
     }
   },
   {
-    "title": "Market Fresh Every Morning",
-    "subtitle": "Sourced at dawn, delivered chilled to your doorstep.",
+    "kicker": "Market-fresh mornings",
+    "title": "Produce picked at dawn, handled with care",
+    "subtitle": "Our shoppers source from local farms across Yewa South to keep your baskets vibrant and nutritious.",
     "image": "assets/images/hero/market-fresh@2x.svg",
     "ctaPrimary": {
-      "label": "Order Produce",
-      "href": "category.html?slug=fresh-produce"
+      "label": "Order via WhatsApp",
+      "href": "https://wa.me/2348085502244"
     },
     "ctaSecondary": {
-      "label": "Book Delivery",
-      "href": "checkout.html"
+      "label": "View Produce Deals",
+      "href": "#popular"
     }
   }
 ];
 
 export const lgas = [
-  "Agege",
-  "Alimosho",
-  "Apapa",
-  "Amuwo-Odofin",
-  "Eti-Osa",
-  "Ibeju-Lekki",
-  "Ifako-Ijaiye",
-  "Ikeja",
-  "Ikorodu",
-  "Kosofe",
-  "Lagos Island",
-  "Lagos Mainland",
-  "Mushin",
-  "Ojo",
-  "Oshodi-Isolo",
-  "Shomolu",
-  "Surulere"
+  "Owode Yewa",
+  "Ilaro",
+  "Ajilete",
+  "Idi Iroko",
+  "Oke Odan",
+  "Ilobi",
+  "Ado Odo",
+  "Ota",
+  "Igbesa",
+  "Ipokia",
+  "Imeko",
+  "Ayetoro",
+  "Sagamu",
+  "Abeokuta",
+  "Idiroko Road",
+  "Sango"
 ];
 
 export const trustBadges = [
@@ -3700,7 +3702,7 @@ export const careerOpenings = [
     "id": "marketplace-product-manager",
     "title": "Marketplace Product Manager",
     "team": "Product & Growth",
-    "location": "Lekki, Lagos (Hybrid)",
+    "location": "Owode Yewa, Ogun State (Hybrid)",
     "type": "Full-time",
     "summary": "Lead cross-functional squads shipping premium grocery shopping experiences across Omoola’s digital channels.",
     "responsibilities": [
@@ -3726,7 +3728,7 @@ export const careerOpenings = [
     "id": "cold-chain-operations-lead",
     "title": "Cold Chain Operations Lead",
     "team": "Fulfilment & Logistics",
-    "location": "Ikeja, Lagos",
+    "location": "Owode Yewa Logistics Hub",
     "type": "Full-time",
     "summary": "Scale chilled logistics, supervise riders, and keep groceries at peak freshness from hub to doorstep.",
     "responsibilities": [
@@ -3739,7 +3741,7 @@ export const careerOpenings = [
     "id": "personal-shopper",
     "title": "Senior Personal Shopper",
     "team": "Customer Concierge",
-    "location": "Victoria Island, Lagos",
+    "location": "Owode Yewa Flagship",
     "type": "Shift-based",
     "summary": "Select premium produce, liaise with farmers, and curate substitutes that wow Omoola customers.",
     "responsibilities": [
@@ -3779,24 +3781,88 @@ export const careerBenefits = [
 
 export const valueProps = [
   {
-    "title": "Same-day Delivery",
-    "copy": "Fresh groceries dispatched every 2 hours across Lagos.",
+    "title": "Prime Owode Yewa location",
+    "copy": "Walk into our flagship store at Isaga Bus Stop for quick pickups opposite The Gem International School.",
     "icon": "assets/icons/location.svg"
   },
   {
-    "title": "Secure Payments",
-    "copy": "PCI-DSS compliant processing via Paystack & Flutterwave.",
-    "icon": "assets/icons/mail.svg"
+    "title": "Doorstep delivery",
+    "copy": "Reliable riders cover Ilaro Road, Idi Iroko axis, and neighbouring Ogun communities every day.",
+    "icon": "assets/icons/phone.svg"
   },
   {
-    "title": "Best Prices",
-    "copy": "Wholesale partnerships keep your basket affordable.",
+    "title": "Curated quality brands",
+    "copy": "Shop authentic provisions, beverages, toiletries, and baby care trusted by leading Nigerian households.",
     "icon": "assets/icons/star.svg"
   },
   {
-    "title": "Easy Returns",
-    "copy": "Report within 24hrs for free replacements or refunds.",
-    "icon": "assets/icons/phone.svg"
+    "title": "Personal concierge support",
+    "copy": "Call, WhatsApp, or stop by for custom hampers, bulk orders, and nutrition guidance tailored to your family.",
+    "icon": "assets/icons/mail.svg"
+  }
+];
+
+export const testimonials = [
+  {
+    "name": "Adebola A.",
+    "location": "Owode Yewa",
+    "rating": 5,
+    "quote": "Omoola makes grocery day effortless. I call ahead, swing by the curbside point, and my order is neatly packed in minutes.",
+    "photo": "assets/images/placeholders/image-placeholder.svg"
+  },
+  {
+    "name": "Folasade K.",
+    "location": "Ilaro",
+    "rating": 5,
+    "quote": "Their produce is always fresh. The team even sends WhatsApp updates on new farm arrivals so I never miss out.",
+    "photo": "assets/images/placeholders/image-placeholder.svg"
+  },
+  {
+    "name": "Ibrahim M.",
+    "location": "Idi Iroko",
+    "rating": 4.5,
+    "quote": "Fast delivery to the border communities and honest pricing. Omoola is my go-to for household essentials.",
+    "photo": "assets/images/placeholders/image-placeholder.svg"
+  },
+  {
+    "name": "Chinonso E.",
+    "location": "Ado Odo",
+    "rating": 5,
+    "quote": "We ordered hampers for our staff and everything was beautifully arranged. Exceptional customer service!",
+    "photo": "assets/images/placeholders/image-placeholder.svg"
+  }
+];
+
+export const galleryItems = [
+  {
+    "title": "Storefront at Isaga Bus Stop",
+    "description": "Welcoming entrance opposite The Gem International School with ample parking for easy pickup.",
+    "image": "assets/images/placeholders/image-placeholder@2x.svg"
+  },
+  {
+    "title": "Provisions & pantry aisle",
+    "description": "Wide variety of grains, cereals, and condiments carefully merchandised for quick shopping.",
+    "image": "assets/images/placeholders/image-placeholder@2x.svg"
+  },
+  {
+    "title": "Chilled beverages corner",
+    "description": "Energy drinks, juices, and sparkling water chilled and ready for gatherings.",
+    "image": "assets/images/placeholders/image-placeholder@2x.svg"
+  },
+  {
+    "title": "Fresh produce display",
+    "description": "Locally sourced fruits and vegetables checked at dawn for peak freshness.",
+    "image": "assets/images/placeholders/image-placeholder@2x.svg"
+  },
+  {
+    "title": "Baby & wellness section",
+    "description": "Trusted diapers, formula, and skincare from global and Nigerian brands.",
+    "image": "assets/images/placeholders/image-placeholder@2x.svg"
+  },
+  {
+    "title": "Community events",
+    "description": "Weekly tasting tables and nutrition clinics hosted for Owode Yewa families.",
+    "image": "assets/images/placeholders/image-placeholder@2x.svg"
   }
 ];
 
@@ -3831,26 +3897,26 @@ export const siteLinks = [
 ];
 
 export const siteContent = {
-  "about": "Omoola Supermarket Stores is Nigeria's premium online grocer delivering freshness, value, and delight in every order. Our team of produce experts curate the best from local markets and global brands so you can shop confidently from home.",
+  "about": "Omoola Supermarket Stores is the neighbourhood supermarket anchoring Owode Yewa with fresh provisions, trusted brands, and thoughtful service. Operating from Isaga Bus Stop opposite The Gem International School, we blend modern retail convenience with market-day warmth for families, commuters, and cross-border traders.",
   "contact": {
-    "address": "17A Admiralty Way, Lekki Phase 1, Lagos",
+    "address": "Isaga Bus Stop, Opp. The Gem International School, Ilaro Road, Owode Yewa, Ogun State",
     "phone": "+234 906 000 1122",
     "whatsapp": "+234 808 550 2244",
-    "email": "hello@omoola.ng",
+    "email": "hello@omoolasupermarketstores.com",
     "hours": "Mon \u2013 Sun: 7am \u2013 9pm"
   },
   "policies": [
     {
       "title": "Privacy Policy",
-      "body": "We protect your personal data with bank-grade encryption and never sell your information to third parties."
+      "body": "We protect your personal data with bank-grade encryption, confidentiality training, and transparent consent choices."
     },
     {
       "title": "Terms & Conditions",
-      "body": "By shopping with Omoola, you agree to our service terms covering delivery, payments, and returns."
+      "body": "Shopping with Omoola covers courteous in-store service, verified deliveries, and flexible payment channels for Ogun State customers."
     },
     {
       "title": "Delivery & Returns",
-      "body": "Free delivery from \u20a625,000. Report issues within 24hrs for instant replacements."
+      "body": "Same-day delivery within Owode Yewa & environs for orders from \u20a610,000. Report concerns within 24hrs for free replacements or refunds."
     }
   ]
 };

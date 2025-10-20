@@ -26,9 +26,15 @@
 }
 
 .btn--secondary {
-  background: rgba(255, 255, 255, 0.12);
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(212, 175, 55, 0.18);
+  color: var(--color-primary);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+}
+
+.btn--secondary:hover,
+.btn--secondary:focus-visible {
+  background: var(--color-secondary);
+  color: #0b1b3a;
 }
 
 .btn--ghost {
@@ -39,8 +45,8 @@
 
 .btn--ghost:hover,
 .btn--ghost:focus-visible {
-  background: rgba(31, 168, 77, 0.08);
-  color: var(--color-secondary);
+  background: rgba(15, 61, 145, 0.1);
+  color: var(--color-primary);
 }
 
 .card {
@@ -75,6 +81,35 @@
 }
 
 .product-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-grid {
+  display: grid;
+  gap: var(--space-lg);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.gallery-card {
+  display: grid;
+  gap: var(--space-sm);
+  padding: var(--space-lg);
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  height: 100%;
+}
+
+.gallery-card__media {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.gallery-card__media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -196,8 +231,8 @@
 .input-field input:focus,
 .input-field select:focus,
 .input-field textarea:focus {
-  border-color: var(--color-secondary);
-  box-shadow: 0 0 0 3px rgba(31, 168, 77, 0.2);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(15, 61, 145, 0.18);
 }
 
 .tabs {
@@ -219,9 +254,9 @@
 }
 
 .tablist button[aria-selected='true'] {
-  background: rgba(31, 168, 77, 0.12);
-  color: var(--color-secondary);
-  border-color: var(--color-secondary);
+  background: rgba(15, 61, 145, 0.12);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
 .accordion {
@@ -400,7 +435,7 @@
   gap: var(--space-xl);
   padding: var(--space-2xl);
   border-radius: var(--radius-lg);
-  background: linear-gradient(135deg, rgba(122, 22, 49, 0.92), rgba(224, 180, 55, 0.92));
+  background: linear-gradient(135deg, rgba(15, 61, 145, 0.92), rgba(212, 175, 55, 0.9));
   color: #fff;
   position: relative;
   overflow: hidden;
@@ -409,6 +444,119 @@
 .banner img {
   width: 100%;
   border-radius: var(--radius-lg);
+}
+
+.testimonial-slider {
+  display: grid;
+  gap: var(--space-lg);
+  position: relative;
+}
+
+.testimonial-slider__track {
+  position: relative;
+  min-height: 220px;
+}
+
+.testimonial-card {
+  display: none;
+  gap: var(--space-md);
+  padding: var(--space-2xl) var(--space-xl);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+  transition: opacity var(--transition-base);
+}
+
+.testimonial-card.is-active {
+  display: grid;
+  opacity: 1;
+}
+
+.testimonial-card__rating {
+  font-size: var(--font-size-lg);
+  color: var(--color-secondary);
+  letter-spacing: 0.12em;
+}
+
+.testimonial-card__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--color-text);
+}
+
+.testimonial-card__meta img {
+  border-radius: 50%;
+  border: 3px solid rgba(212, 175, 55, 0.4);
+}
+
+.testimonial-slider__dots {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+}
+
+.testimonial-slider__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid rgba(15, 61, 145, 0.4);
+  background: transparent;
+  transition: background var(--transition-base), border var(--transition-base);
+}
+
+.testimonial-slider__dot.is-active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.testimonial-slider__dot:is(:hover, :focus-visible) {
+  border-color: var(--color-secondary);
+}
+
+.map-embed {
+  position: relative;
+  padding-top: 56.25%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.map-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.blog-card {
+  display: grid;
+  gap: var(--space-lg);
+  grid-template-columns: 1fr;
+}
+
+.blog-card__media {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+.blog-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .blog-card {
+    grid-template-columns: minmax(0, 320px) 1fr;
+    align-items: center;
+  }
+
+  .blog-card__media {
+    height: 100%;
+  }
 }
 
 .hero__slides {
