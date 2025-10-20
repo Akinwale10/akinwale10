@@ -1,6 +1,6 @@
 # Omoola Supermarket Stores
 
-Premium, PWA-ready e-commerce experience for Omoola Supermarket Stores powered by vanilla HTML, CSS, and JavaScript. The site is optimised for Lagos shoppers with same-day delivery, loyalty rewards, and rich product data.
+Premium, PWA-ready experience for Omoola Supermarket Stores powered by vanilla HTML, CSS, and JavaScript. The site is optimised for Owode Yewa and Ogun State shoppers with in-store pickup, neighbourhood delivery, and rich product storytelling.
 
 ## Preview locally
 

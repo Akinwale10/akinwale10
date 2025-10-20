@@ -44,24 +44,24 @@ button {
 
 :root {
   /* Color tokens */
-  --color-primary: #7A1631;
-  --color-secondary: #1FA84D;
-  --color-accent: #E0B437;
-  --color-bg: #F7F8FA;
+  --color-primary: #0F3D91;
+  --color-secondary: #D4AF37;
+  --color-accent: #F5C74E;
+  --color-bg: #F5F7FB;
   --color-surface: #FFFFFF;
-  --color-text: #111827;
-  --color-muted: #6B7280;
+  --color-text: #0B1B3A;
+  --color-muted: #5B6C94;
   --color-success: #16A34A;
   --color-danger: #DC2626;
   --color-warning: #F59E0B;
   --color-info: #0EA5E9;
   --color-border: rgba(17, 24, 39, 0.12);
   --color-shadow: rgba(17, 24, 39, 0.1);
-  --gradient-primary: linear-gradient(135deg, rgba(122,22,49,0.95) 0%, rgba(31,168,77,0.9) 100%);
+  --gradient-primary: linear-gradient(135deg, rgba(15, 61, 145, 0.94) 0%, rgba(212, 175, 55, 0.9) 100%);
 
   /* Typography */
-  --font-heading: 'Anton', 'Arial Black', system-ui, sans-serif;
-  --font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: 'Lato', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-size-xs: clamp(0.75rem, 0.72rem + 0.2vw, 0.8rem);
   --font-size-sm: clamp(0.875rem, 0.82rem + 0.2vw, 0.95rem);
   --font-size-base: clamp(1rem, 0.98rem + 0.2vw, 1.05rem);
@@ -125,12 +125,13 @@ main {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  font-weight: 400;
-  letter-spacing: 0.04em;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--color-text);
 }
 
 p {
-  line-height: 1.6;
+  line-height: 1.7;
   color: var(--color-muted);
 }
 
@@ -146,7 +147,7 @@ p {
 }
 
 :focus-visible {
-  outline: 3px solid var(--color-accent);
+  outline: 3px solid rgba(15, 61, 145, 0.55);
   outline-offset: 3px;
 }
 

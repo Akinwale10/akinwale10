@@ -12,6 +12,8 @@ import {
   faqs,
   careerOpenings,
   careerBenefits,
+  testimonials,
+  galleryItems,
 } from './data.js';
 import { initDrawer, initTabs, initTicker, setupCookieBanner, formatCurrency, showToast } from './ui.js';
 import { initSearch } from './search.js';
@@ -22,6 +24,8 @@ import { initPWA } from './pwa.js';
 
 const state = {
   heroIndex: 0,
+  testimonialIndex: 0,
+  testimonialTimer: null,
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -78,6 +82,12 @@ document.addEventListener('DOMContentLoaded', () => {
     case 'careers':
       renderCareersPage();
       break;
+    case 'blog':
+      renderBlogPage();
+      break;
+    case 'gallery':
+      renderGalleryPage();
+      break;
     default:
       break;
   }
@@ -89,6 +99,8 @@ function renderHome() {
   renderHero();
   renderValueProps();
   renderCategoryHighlights();
+  renderGalleryPreview();
+  renderTestimonials();
   renderFeaturedCollections();
   renderPromoSection();
   renderBlogSection();
@@ -106,11 +118,12 @@ function renderHero() {
             <img src="${slide.image}" alt="${slide.title}" />
           </div>
           <div class="hero__content">
-            <h1 class="hero__title">OMOOLA SUPERMARKET STORES</h1>
+            ${slide.kicker ? `<span class="hero__kicker">${slide.kicker}</span>` : ''}
+            <h1 class="hero__title">${slide.title}</h1>
             <p class="hero__subtitle">${slide.subtitle}</p>
             <div class="hero__actions">
-              <a class="btn btn--primary" href="${slide.ctaPrimary.href}">${slide.ctaPrimary.label}</a>
-              <a class="btn btn--secondary" href="${slide.ctaSecondary.href}">${slide.ctaSecondary.label}</a>
+              <a class="btn btn--primary" href="${slide.ctaPrimary.href}"${slide.ctaPrimary.href.startsWith('http') ? ' target="_blank" rel="noopener"' : ''}>${slide.ctaPrimary.label}</a>
+              <a class="btn btn--secondary" href="${slide.ctaSecondary.href}"${slide.ctaSecondary.href.startsWith('http') ? ' target="_blank" rel="noopener"' : ''}>${slide.ctaSecondary.label}</a>
             </div>
           </div>
         </div>
@@ -173,6 +186,27 @@ function renderCategoryHighlights() {
     .join('');
 }
 
+function renderGalleryPreview() {
+  const preview = document.querySelector('[data-gallery-preview]');
+  if (!preview) return;
+  const items = galleryItems.slice(0, 6);
+  preview.innerHTML = items
+    .map(
+      (item) => `
+        <figure class="gallery-card" role="listitem">
+          <div class="gallery-card__media">
+            <img src="${item.image}" alt="${item.title}" loading="lazy">
+          </div>
+          <figcaption class="d-grid gap-xs">
+            <h3>${item.title}</h3>
+            <p class="text-muted">${item.description}</p>
+          </figcaption>
+        </figure>
+      `
+    )
+    .join('');
+}
+
 function renderFeaturedCollections() {
   const collections = [
     {
@@ -210,6 +244,92 @@ function renderFeaturedCollections() {
       `
     )
     .join('');
+}
+
+function renderTestimonials() {
+  const wrapper = document.querySelector('[data-testimonials]');
+  if (!wrapper || testimonials.length === 0) return;
+  wrapper.innerHTML = `
+    <div class="testimonial-slider" role="region" aria-label="Customer testimonials">
+      <div class="testimonial-slider__track" data-testimonial-track>
+        ${testimonials
+          .map(
+            (entry, index) => `
+              <article class="testimonial-card ${index === state.testimonialIndex ? 'is-active' : ''}" data-testimonial-slide>
+                <div class="testimonial-card__rating" aria-label="Rated ${entry.rating} out of 5 stars">
+                  ${'★'.repeat(Math.round(entry.rating))}
+                </div>
+                <p>${entry.quote}</p>
+                <div class="testimonial-card__meta">
+                  <img src="${entry.photo}" alt="${entry.name}" loading="lazy" width="48" height="48">
+                  <div>
+                    <strong>${entry.name}</strong>
+                    <span>${entry.location}</span>
+                  </div>
+                </div>
+              </article>
+            `
+          )
+          .join('')}
+      </div>
+      <div class="testimonial-slider__dots" role="tablist">
+        ${testimonials
+          .map(
+            (_, index) => `
+              <button class="testimonial-slider__dot" type="button" data-testimonial-dot="${index}" aria-label="Show testimonial ${index + 1}"></button>
+            `
+          )
+          .join('')}
+      </div>
+    </div>
+  `;
+
+  const slides = Array.from(wrapper.querySelectorAll('[data-testimonial-slide]'));
+  const dots = Array.from(wrapper.querySelectorAll('[data-testimonial-dot]'));
+
+  const setActive = (index) => {
+    state.testimonialIndex = index;
+    slides.forEach((slide, slideIndex) => {
+      slide.classList.toggle('is-active', slideIndex === index);
+      slide.setAttribute('aria-hidden', slideIndex === index ? 'false' : 'true');
+    });
+    dots.forEach((dot, dotIndex) => {
+      dot.classList.toggle('is-active', dotIndex === index);
+      dot.setAttribute('aria-selected', dotIndex === index ? 'true' : 'false');
+    });
+  };
+
+  const advance = () => {
+    const nextIndex = (state.testimonialIndex + 1) % slides.length;
+    setActive(nextIndex);
+  };
+
+  const startAuto = () => {
+    if (state.testimonialTimer) {
+      clearInterval(state.testimonialTimer);
+    }
+    state.testimonialTimer = setInterval(advance, 7000);
+  };
+
+  dots.forEach((dot) => {
+    dot.addEventListener('click', () => {
+      const index = Number.parseInt(dot.dataset.testimonialDot, 10);
+      setActive(index);
+      startAuto();
+    });
+  });
+
+  wrapper.addEventListener('mouseenter', () => {
+    if (state.testimonialTimer) clearInterval(state.testimonialTimer);
+  });
+  wrapper.addEventListener('focusin', () => {
+    if (state.testimonialTimer) clearInterval(state.testimonialTimer);
+  });
+  wrapper.addEventListener('mouseleave', startAuto);
+  wrapper.addEventListener('focusout', startAuto);
+
+  setActive(state.testimonialIndex);
+  startAuto();
 }
 
 function renderPromoSection() {
@@ -492,6 +612,48 @@ function renderDealsPage() {
   if (countEl) countEl.textContent = deals.length;
 }
 
+function renderBlogPage() {
+  const list = document.querySelector('[data-blog-page]');
+  if (!list) return;
+  list.innerHTML = blogPosts
+    .map(
+      (post) => `
+        <article class="card blog-card d-grid gap-md" role="listitem">
+          <figure class="blog-card__media">
+            <img src="${post.image2x || post.image}" alt="${post.title}" loading="lazy">
+          </figure>
+          <div class="d-grid gap-sm">
+            <span class="tag">News</span>
+            <h2>${post.title}</h2>
+            <p>${post.excerpt}</p>
+            <a class="btn btn--ghost" href="#${post.slug}" aria-label="Read ${post.title}">Read article</a>
+          </div>
+        </article>
+      `
+    )
+    .join('');
+}
+
+function renderGalleryPage() {
+  const grid = document.querySelector('[data-gallery-page]');
+  if (!grid) return;
+  grid.innerHTML = galleryItems
+    .map(
+      (item) => `
+        <figure class="gallery-card" role="listitem" id="${item.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}">
+          <div class="gallery-card__media">
+            <img src="${item.image}" alt="${item.title}" loading="lazy">
+          </div>
+          <figcaption class="d-grid gap-xs">
+            <h2>${item.title}</h2>
+            <p class="text-muted">${item.description}</p>
+          </figcaption>
+        </figure>
+      `
+    )
+    .join('');
+}
+
 function renderCareersPage() {
   const list = document.querySelector('[data-careers-list]');
   const emptyState = document.querySelector('[data-careers-empty]');
@@ -591,7 +753,7 @@ function careerCard(career) {
       <h3>${career.title}</h3>
       <p>${career.summary}</p>
       ${responsibilities ? `<ul class="d-grid gap-xs" role="list">${responsibilities}</ul>` : ''}
-      <a class="btn btn--primary" href="mailto:careers@omoola.ng?subject=${subject}">Apply now</a>
+      <a class="btn btn--primary" href="mailto:careers@omoolasupermarketstores.com?subject=${subject}">Apply now</a>
     </article>
   `;
 }

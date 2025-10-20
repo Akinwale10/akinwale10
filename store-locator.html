@@ -2,31 +2,264 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Store Locator | OMOOLA SUPERMARKET</title>
-    <link rel="stylesheet" href="src/styles/main.css" />
+    <title>Store Locator | Omoola Supermarket Stores</title>
+    <meta
+      name="description"
+      content="Find Omoola Supermarket Stores at Isaga Bus Stop, Owode Yewa. Explore service areas, pickup options, and get instant directions."
+    />
+    <link rel="canonical" href="https://www.omoolasupermarketstores.com/store-locator.html" />
+    <meta property="og:title" content="Visit Omoola Supermarket Stores" />
+    <meta
+      property="og:description"
+      content="Plan your visit to Omoola Supermarket Stores in Owode Yewa and explore our delivery coverage across Ogun border communities."
+    />
+    <meta property="og:image" content="https://www.omoolasupermarketstores.com/assets/images/hero/premium-groceries@2x.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.omoolasupermarketstores.com/store-locator.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Store Locator | Omoola Supermarket Stores" />
+    <meta
+      name="twitter:description"
+      content="Locate Omoola Supermarket Stores in Owode Yewa and see our delivery reach across Ogun State."
+    />
+    <meta name="twitter:image" content="https://www.omoolasupermarketstores.com/assets/images/hero/premium-groceries@2x.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&amp;family=Lato:wght@400;500;600;700&amp;display=swap"
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/utilities.css" />
   </head>
-  <body>
-    <div data-app-root>
-      <main class="container" style="margin-top:2rem;max-width:900px;">
-        <h1 class="section-title">Visit our experience centres</h1>
-        <p>Explore click-and-collect hubs and tasting studios across Lagos.</p>
-        <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;">
-          <div class="card">
-            <h3 style="margin-top:0;">Ikeja GRA</h3>
-            <p>12A Isaac John Street, Ikeja GRA. Open 8am – 9pm daily.</p>
-          </div>
-          <div class="card">
-            <h3 style="margin-top:0;">Lekki Phase 1</h3>
-            <p>30 Admiralty Way, Lekki. Offers cold chain pickup and tasting bar.</p>
-          </div>
-          <div class="card">
-            <h3 style="margin-top:0;">Yaba Tech Hub</h3>
-            <p>45 Herbert Macaulay Way, Yaba. Startup-friendly pickup point.</p>
-          </div>
+  <body data-page="store-locator">
+    <a class="visually-hidden" href="#main">Skip to main content</a>
+    <header class="site-header" role="banner">
+      <div class="topbar">
+        <div class="d-flex items-center gap-sm" aria-label="Customer support">
+          <img src="assets/icons/phone.svg" alt="Phone" width="18" height="18" />
+          <span>Need help? Call or WhatsApp <strong>+234 906 000 1122</strong></span>
         </div>
-      </main>
+        <div class="topbar__ticker" aria-live="polite">
+          <ul>
+            <li>Serving Owode Yewa, Ilaro Road, and Ogun border communities daily.</li>
+            <li>Call ahead for curbside pickup at Isaga Bus Stop.</li>
+            <li>Ask about our loyalty bundles and weekly market-fresh deals.</li>
+          </ul>
+        </div>
+        <span class="text-uppercase">Visit us: Isaga Bus Stop · Opp. The Gem International School</span>
+      </div>
+      <div class="header-main container" role="navigation" aria-label="Site">
+        <a class="brand" href="index.html">
+          <img src="assets/logos/omoola-logo.svg" alt="Omoola Supermarket Stores" width="120" height="48" />
+          <span class="text-uppercase">Omoola Stores</span>
+        </a>
+        <form class="search-bar" data-search-form role="search" aria-labelledby="search-label">
+          <label id="search-label" class="visually-hidden" for="site-search">Search Omoola</label>
+          <select aria-label="Filter by category">
+            <option value="all">All categories</option>
+            <option value="fresh-produce">Fresh Produce</option>
+            <option value="meat-fish">Meat &amp; Fish</option>
+            <option value="pantry-essentials">Pantry</option>
+            <option value="breakfast-dairy">Breakfast &amp; Dairy</option>
+            <option value="snacks">Snacks</option>
+            <option value="household">Household</option>
+            <option value="personal-care">Personal Care</option>
+            <option value="babies-kids">Babies</option>
+          </select>
+          <input id="site-search" type="search" placeholder="Search groceries" data-search-input autocomplete="off" aria-controls="search-panel" />
+          <button type="submit">
+            <img src="assets/icons/search.svg" alt="" width="20" height="20" />
+            <span>Search</span>
+          </button>
+          <div class="card" data-search-panel id="search-panel" hidden></div>
+        </form>
+        <div class="header-actions" role="group" aria-label="Account actions">
+          <a class="action" href="account.html">
+            <img src="assets/icons/user.svg" alt="Account" width="22" height="22" />
+            <span>Account</span>
+          </a>
+          <a class="action" href="wishlist.html">
+            <img src="assets/icons/heart.svg" alt="Wishlist" width="22" height="22" />
+            <span>Wishlist</span>
+          </a>
+          <button class="action" type="button" data-cart-trigger aria-expanded="false" aria-controls="cart-drawer">
+            <img src="assets/icons/cart.svg" alt="Cart" width="22" height="22" />
+            <span>Cart <sup data-cart-count>0</sup></span>
+          </button>
+        </div>
+      </div>
+      <div class="navbar" role="navigation" aria-label="Main menu">
+        <nav class="container">
+          <a href="category.html?slug=fresh-produce">Fresh Produce</a>
+          <a href="category.html?slug=meat-fish">Meat &amp; Fish</a>
+          <a href="category.html?slug=pantry-essentials">Pantry</a>
+          <a href="category.html?slug=beverages">Beverages</a>
+          <a href="category.html?slug=breakfast-dairy">Breakfast &amp; Dairy</a>
+          <a href="category.html?slug=snacks">Snacks</a>
+          <a href="category.html?slug=household">Household</a>
+          <a href="category.html?slug=personal-care">Personal Care</a>
+          <a href="category.html?slug=babies-kids">Babies</a>
+          <a href="deals.html">Deals</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="blog.html">Blog</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="section">
+      <div class="container d-grid gap-xl">
+        <header class="section__header">
+          <h1>Store locator</h1>
+          <p>Plan your visit to Omoola Supermarket Stores and explore how we serve Owode Yewa and neighbouring towns.</p>
+        </header>
+
+        <section class="layout-two-column">
+          <article class="card d-grid gap-md" aria-labelledby="store-overview">
+            <div class="d-flex items-center gap-sm">
+              <img src="assets/icons/location.svg" alt="Location" width="28" height="28" />
+              <h2 id="store-overview">Our flagship store</h2>
+            </div>
+            <p>
+              We are proudly rooted at <strong>Isaga Bus Stop, Opp. The Gem International School, Ilaro Road, Owode Yewa, Ogun State</strong>.
+              Visit us for curated groceries, ready-to-go meal kits, and concierge support for families and businesses.
+            </p>
+            <div class="d-grid gap-xs" role="list">
+              <div class="d-flex justify-between flex-wrap" role="listitem">
+                <span class="text-muted">Opening hours</span>
+                <strong>Mon – Sat: 7:00am – 9:00pm • Sun: 10:00am – 6:00pm</strong>
+              </div>
+              <div class="d-flex justify-between flex-wrap" role="listitem">
+                <span class="text-muted">Customer care</span>
+                <a href="tel:+2349060001122">+234 906 000 1122</a>
+              </div>
+              <div class="d-flex justify-between flex-wrap" role="listitem">
+                <span class="text-muted">Email</span>
+                <a href="mailto:hello@omoolasupermarketstores.com">hello@omoolasupermarketstores.com</a>
+              </div>
+            </div>
+            <div class="d-flex gap-sm flex-wrap">
+              <a class="btn btn--primary" href="https://maps.google.com/?q=Omoola+Supermarket+Stores+Owode+Yewa" target="_blank" rel="noopener">Get directions</a>
+              <a class="btn btn--ghost" href="contact.html">Contact our team</a>
+            </div>
+          </article>
+
+          <aside class="d-grid gap-md">
+            <article class="card d-grid gap-sm" aria-labelledby="service-areas">
+              <h2 id="service-areas">Delivery coverage</h2>
+              <ul class="d-grid gap-xs" role="list">
+                <li><strong>Owode Yewa &amp; Ilaro Road:</strong> Same-day delivery with 90-minute rider loops.</li>
+                <li><strong>Border communities:</strong> Ajilete, Idi Iroko, Ilobi, and Oke Odan served twice daily.</li>
+                <li><strong>Extended routes:</strong> Refrigerated dispatch for Abeokuta, Sango Ota, and Lagos on scheduled days.</li>
+              </ul>
+            </article>
+            <article class="card d-grid gap-sm" aria-labelledby="pickup-options">
+              <h2 id="pickup-options">Pickup &amp; in-store services</h2>
+              <ul class="d-grid gap-xs" role="list">
+                <li>Curbside collection with pre-packed orders ready in under 20 minutes.</li>
+                <li>Personal shoppers for seniors and busy professionals.</li>
+                <li>Corporate hamper assembly and school meal planning support.</li>
+              </ul>
+            </article>
+          </aside>
+        </section>
+
+        <section class="card d-grid gap-md" id="map" aria-labelledby="map-heading">
+          <div class="d-grid gap-xs">
+            <h2 id="map-heading">Navigate to Omoola</h2>
+            <p>Use the interactive map to preview traffic, public transport stops, and nearby landmarks before your visit.</p>
+          </div>
+          <div class="map-embed">
+            <iframe
+              title="Omoola Supermarket Stores on Google Maps"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3931.6374979118144!2d2.934760415337017!3d6.698330423222902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNDEnNTQuMCJOIDIuNTYnMDUiRQ!5e0!3m2!1sen!2sng!4v1700000000000"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <a class="btn btn--ghost" href="https://maps.google.com/?q=Omoola+Supermarket+Stores+Owode+Yewa" target="_blank" rel="noopener">Open in Google Maps</a>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer__top">
+        <div>
+          <img src="assets/logos/omoola-logo.svg" alt="Omoola logo" width="140" height="48" />
+          <p class="mt-md">Premium neighbourhood supermarket serving Owode Yewa, Ogun State with curated provisions.</p>
+        </div>
+        <div>
+          <h3>Shop</h3>
+          <ul role="list" class="d-grid gap-xs mt-md">
+            <li><a href="category.html?slug=fresh-produce">Fresh Produce</a></li>
+            <li><a href="category.html?slug=pantry-essentials">Pantry Essentials</a></li>
+            <li><a href="category.html?slug=beverages">Beverages</a></li>
+            <li><a href="category.html?slug=snacks">Snacks</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Help</h3>
+          <ul role="list" class="d-grid gap-xs mt-md">
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="delivery-returns.html">Delivery &amp; Returns</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Company</h3>
+          <ul role="list" class="d-grid gap-xs mt-md">
+            <li><a href="about.html">About</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="policies.html">Privacy &amp; Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer__bottom">
+        <div class="d-flex gap-sm items-center flex-wrap">
+          <img src="assets/images/trust/paystack-secure.svg" alt="Paystack" height="40" />
+          <img src="assets/images/trust/flutterwave-trusted.svg" alt="Flutterwave" height="40" />
+        </div>
+        <small>© <span id="copyright-year"></span> Omoola Supermarket Stores. All rights reserved.</small>
+        <div class="d-flex gap-sm flex-wrap text-muted">
+          <a href="policies.html">Privacy</a>
+          <a href="policies.html">Terms</a>
+          <a href="sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </footer>
+
+    <aside class="drawer" id="cart-drawer" data-cart-drawer aria-hidden="true">
+      <div class="drawer__header d-flex justify-between items-center">
+        <h2>Your cart</h2>
+        <button type="button" data-drawer-close aria-label="Close cart">
+          <img src="assets/icons/close.svg" alt="Close" width="20" height="20" />
+        </button>
+      </div>
+      <div class="drawer__content" data-cart-items></div>
+      <div class="drawer__footer d-grid gap-sm">
+        <div class="d-flex justify-between"><span class="text-muted">Subtotal</span><strong data-cart-subtotal>₦0</strong></div>
+        <div class="d-flex justify-between"><span class="text-muted">Delivery</span><strong data-cart-delivery>₦0</strong></div>
+        <div class="d-flex justify-between"><span class="text-muted">Total</span><strong data-cart-total>₦0</strong></div>
+        <a class="btn btn--primary" href="checkout.html">Checkout</a>
+      </div>
+    </aside>
+
+    <div class="cookie-banner card" data-cookie-banner hidden role="dialog" aria-live="polite">
+      <div class="d-grid gap-sm">
+        <h3>We use cookies</h3>
+        <p>Omoola uses cookies to personalise your basket and track analytics. Accept to continue shopping seamlessly.</p>
+        <div class="d-flex gap-sm flex-wrap">
+          <button class="btn btn--primary" data-cookie-accept>I accept</button>
+          <a class="btn btn--ghost" href="policies.html">Review policy</a>
+        </div>
+      </div>
     </div>
-    <script type="module" src="src/scripts/app.js" defer></script>
+
+    <script type="module" src="js/app.js"></script>
   </body>
 </html>

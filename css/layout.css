@@ -121,7 +121,7 @@ header.site-header {
 
 .header-actions .action:hover,
 .header-actions .action:focus-visible {
-  background: rgba(122, 22, 49, 0.08);
+  background: rgba(15, 61, 145, 0.1);
   color: var(--color-primary);
 }
 
@@ -157,8 +157,8 @@ header.site-header {
 .navbar a:hover,
 .navbar a:focus-visible,
 .navbar a[aria-current='page'] {
-  background: rgba(31, 168, 77, 0.1);
-  color: var(--color-secondary);
+  background: rgba(15, 61, 145, 0.12);
+  color: var(--color-primary);
 }
 
 .hero {
@@ -199,6 +199,21 @@ header.site-header {
   padding: 0 var(--space-md);
 }
 
+.hero__kicker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 1rem;
+  border-radius: var(--radius-round);
+  background: rgba(212, 175, 55, 0.18);
+  color: var(--color-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-sm);
+}
+
 .hero__title {
   font-size: var(--font-size-3xl);
   margin-bottom: var(--space-md);
@@ -219,6 +234,10 @@ header.site-header {
 
 .section {
   padding: var(--space-3xl) 0;
+}
+
+.section--alt {
+  background: var(--color-surface);
 }
 
 .section__header {
@@ -274,7 +293,7 @@ header.site-header {
 }
 
 footer.site-footer {
-  background: #0b0d11;
+  background: #0b1b3a;
   color: rgba(255, 255, 255, 0.92);
   padding-top: var(--space-3xl);
   margin-top: var(--space-3xl);
