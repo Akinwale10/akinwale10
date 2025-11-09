@@ -286,6 +286,7 @@ h6 { font-size: 1rem; }
 }
 
 .hamburger span {
+    display: block;
     width: 25px;
     height: 3px;
     background-color: var(--white);
@@ -550,6 +551,7 @@ h6 { font-size: 1rem; }
     height: 200px;
     object-fit: cover;
     background-color: var(--light);
+    aspect-ratio: 16 / 9;
 }
 
 .menu-card-content {
@@ -614,7 +616,7 @@ h6 { font-size: 1rem; }
     position: relative;
     border-radius: var(--border-radius);
     overflow: hidden;
-    aspect-ratio: 1;
+    aspect-ratio: 16 / 9;
 }
 
 .media-item img,
@@ -648,7 +650,7 @@ h6 { font-size: 1rem; }
     border-radius: var(--border-radius);
     overflow: hidden;
     cursor: pointer;
-    aspect-ratio: 1;
+    aspect-ratio: 16 / 9;
 }
 
 .gallery-item img {
