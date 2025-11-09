@@ -159,7 +159,7 @@ async function loadMediaSection() {
         }
         return `
             <div class="media-item">
-                <img src="${item.url}" alt="${item.alt}" loading="lazy">
+                <img src="${item.url}" alt="${item.alt}" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22225%22 viewBox=%220 0 400 225%22%3E%3Crect fill=%22%23f7f7f7%22 width=%22400%22 height=%22225%22/%3E%3Cg fill=%22%23e10600%22%3E%3Ctext x=%2250%25%22 y=%2245%25%22 font-family=%22Arial,sans-serif%22 font-size=%2260%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3E🍽️%3C/text%3E%3Ctext x=%2250%25%22 y=%2265%25%22 font-family=%22Arial,sans-serif%22 font-size=%2216%22 fill=%22%23666%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EB2D Kitchen%3C/text%3E%3C/g%3E%3C/svg%3E';">
             </div>
         `;
     }).join('');
@@ -183,7 +183,7 @@ async function loadGallery() {
     
     galleryGrid.innerHTML = galleryImages.map((img, index) => `
         <div class="gallery-item" data-index="${index}">
-            <img src="${img.url}" alt="${img.alt}" loading="lazy">
+            <img src="${img.url}" alt="${img.alt}" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22225%22 viewBox=%220 0 400 225%22%3E%3Crect fill=%22%23f7f7f7%22 width=%22400%22 height=%22225%22/%3E%3Cg fill=%22%23e10600%22%3E%3Ctext x=%2250%25%22 y=%2245%25%22 font-family=%22Arial,sans-serif%22 font-size=%2260%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3E🍽️%3C/text%3E%3Ctext x=%2250%25%22 y=%2265%25%22 font-family=%22Arial,sans-serif%22 font-size=%2216%22 fill=%22%23666%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EB2D Kitchen%3C/text%3E%3C/g%3E%3C/svg%3E';">
         </div>
     `).join('');
 }
@@ -259,7 +259,7 @@ function renderMenu() {
     noResults.style.display = 'none';
     menuGrid.innerHTML = filtered.map(item => `
         <div class="menu-card">
-            <img src="${item.image}" alt="${item.name}" class="menu-card-image" loading="lazy">
+            <img src="${item.image}" alt="${item.name}" class="menu-card-image" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22225%22 viewBox=%220 0 400 225%22%3E%3Crect fill=%22%23f7f7f7%22 width=%22400%22 height=%22225%22/%3E%3Cg fill=%22%23e10600%22%3E%3Ctext x=%2250%25%22 y=%2245%25%22 font-family=%22Arial,sans-serif%22 font-size=%2260%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3E🍽️%3C/text%3E%3Ctext x=%2250%25%22 y=%2265%25%22 font-family=%22Arial,sans-serif%22 font-size=%2216%22 fill=%22%23666%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EB2D Kitchen%3C/text%3E%3C/g%3E%3C/svg%3E';">
             <div class="menu-card-content">
                 <div class="menu-card-header">
                     <h3 class="menu-card-name">${item.name}</h3>
@@ -273,6 +273,41 @@ function renderMenu() {
             </div>
         </div>
     `).join('');
+    
+    // Add error handlers for images to show fallback placeholder
+    setupImageFallbacks();
+}
+
+// ========================================
+// IMAGE FALLBACK HANDLER
+// ========================================
+function setupImageFallbacks() {
+    // Create a placeholder image as a data URI (Nigerian food theme)
+    const placeholderImage = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="225" viewBox="0 0 400 225"%3E%3Crect fill="%23f7f7f7" width="400" height="225"/%3E%3Cg fill="%23e10600"%3E%3Ctext x="50%25" y="45%25" font-family="Arial,sans-serif" font-size="60" text-anchor="middle" dominant-baseline="middle"%3E🍽️%3C/text%3E%3Ctext x="50%25" y="65%25" font-family="Arial,sans-serif" font-size="16" fill="%23666" text-anchor="middle" dominant-baseline="middle"%3EB2D Kitchen%3C/text%3E%3C/g%3E%3C/svg%3E';
+    
+    // Handle menu card images
+    document.querySelectorAll('.menu-card-image').forEach(img => {
+        img.onerror = function() {
+            this.onerror = null; // Prevent infinite loop
+            this.src = placeholderImage;
+        };
+    });
+    
+    // Handle media grid images
+    document.querySelectorAll('.media-item img').forEach(img => {
+        img.onerror = function() {
+            this.onerror = null;
+            this.src = placeholderImage;
+        };
+    });
+    
+    // Handle gallery images
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+        img.onerror = function() {
+            this.onerror = null;
+            this.src = placeholderImage;
+        };
+    });
 }
 
 // ========================================
